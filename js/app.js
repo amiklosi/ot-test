@@ -22,7 +22,8 @@ function initializeSession() {
     };
     const subscriber = session.subscribe(event.stream, 'subscriber', subscriberOptions, handleError);
 
-    const WORKS_WITH_THIS = 10000;
+    // -- mikl --
+    // const WORKS_WITH_THIS = 10000;
     const GETTING_EXCEPTION = 2000;
     setTimeout(() => {
       session.unsubscribe(subscriber);
@@ -39,6 +40,7 @@ function initializeSession() {
     insertMode: 'append',
     width: '100%',
     height: '100%',
+    // -- mikl --
     publishVideo: false  /* no exception if you set this to true */
   };
   var publisher = OT.initPublisher('publisher', publisherOptions, handleError);
